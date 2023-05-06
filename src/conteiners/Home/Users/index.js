@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from 'react-router-dom'
 
 import axios from 'axios'
 
 import Avatar from "../../../assets/avatar.svg"
-import Seta from '../../assets/seta.svg'
-import Trash from '../../assets/lixeira.svg'
+import Seta from "../../../assets/seta.svg"
+import Trash from "../../../assets/lixeira.svg"
 
 
 import {
@@ -21,9 +22,8 @@ import {
 function Users() {
   //const users = [];
   const [users, setUsers] = useState([]);  //Criando um estado no react
-
+  const history = useHistory() // navegando entre telas com o hostory
  
-  
 
   useEffect(() => { // userEffect não aceita "async e await", preciso criar uma função async 
     async function fetchUsers() {
@@ -42,6 +42,9 @@ function Users() {
     const newUsers = users.filter(user => user.id !== userId)
     setUsers(newUsers)
   }
+  function goBackPage(){
+    history.push("/");
+  }
 
   return (
     <Container>
@@ -57,7 +60,7 @@ function Users() {
             </User>
           ))}
         </ul>
-        <Button>
+        <Button onClick={goBackPage}>
         <img alt="seta" src={Seta} /> Voltar 
         </Button>
 

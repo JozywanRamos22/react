@@ -1,5 +1,5 @@
 import React, { useState, useRef,  } from "react";
-
+import { useHistory } from "react-router-dom"
 import axios from 'axios'
 
 import People from "../../assets/people.svg";
@@ -22,6 +22,7 @@ import {
 function App() {
   //const users = [];
   const [users, setUsers] = useState([]);  //Criando um estado no react
+  const history = useHistory()
   const inputName = useRef()
   const inputAge = useRef()
 
@@ -30,9 +31,10 @@ function App() {
       name: inputName.current.value,
       age: inputAge.current.value,
     });
-    console.log(newUser)
+    
 
     setUsers([...users, newUser]);
+    history.push("/usuarios")
 
   }
 
@@ -52,7 +54,7 @@ function App() {
         <Button onClick={addNewUser}>
           Cadastrar <img alt="seta" src={Seta} />
         </Button>
-    
+      
       </ContainerItens>
     </Container>
 

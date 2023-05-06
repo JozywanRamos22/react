@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom@5";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from './conteiners/Home'
 import Users from './conteiners/Home/Users'
@@ -10,7 +10,7 @@ return(
     <Router>
         <Switch>
         <Route exact path="/" component = {Home}/>   
-        <Route exact path="/usuários" component={Users}/>
+        <Route exact path="/usuarios" component={Users}/>
         </Switch>
     </Router>
 )
