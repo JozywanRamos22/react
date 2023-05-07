@@ -8,11 +8,10 @@ import Seta from "../../../assets/seta.svg"
 import Trash from "../../../assets/lixeira.svg"
 import H1 from "../../../components/Titile"
 import ContainerItens  from "../../../components/Titile/ConteinerItens";
-
+import Button from "../../../components/Titile/Button";
 import {
   Container,
   Image,
-  Button,
   User,
 
 
@@ -59,7 +58,7 @@ function Users() {
             </User>
           ))}
         </ul>
-        <Button onClick={goBackPage}>
+        <Button isBack={true} onClick={goBackPage}>
         <img alt="seta" src={Seta} /> Voltar 
         </Button>
 

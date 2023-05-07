@@ -7,13 +7,14 @@ import Seta from "../../assets/seta.svg";
 
 import H1 from "../../components/Titile"
 import ContainerItens from "../../components/Titile/ConteinerItens";
+import Button from "../../components/Titile/Button"
 
 import {
   Container,
   Image,
   InputLabel,
   Input,
-  Button,
+  
   
 
 
