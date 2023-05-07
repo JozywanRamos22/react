@@ -6,11 +6,11 @@ import People from "../../assets/people.svg";
 import Seta from "../../assets/seta.svg";
 
 import H1 from "../../components/Titile"
+import ContainerItens from "../../components/Titile/ConteinerItens";
 
 import {
   Container,
   Image,
-  ContainerItens,
   InputLabel,
   Input,
   Button,

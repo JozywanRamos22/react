@@ -6,13 +6,12 @@ import axios from 'axios'
 import Avatar from "../../../assets/avatar.svg"
 import Seta from "../../../assets/seta.svg"
 import Trash from "../../../assets/lixeira.svg"
-
+import H1 from "../../../components/Titile"
+import ContainerItens  from "../../../components/Titile/ConteinerItens";
 
 import {
   Container,
-  H1,
   Image,
-  ContainerItens,
   Button,
   User,
 
@@ -49,7 +48,7 @@ function Users() {
   return (
     <Container>
       <Image alt="logo-imagem" src={Avatar} />
-      <ContainerItens>
+      <ContainerItens isBlur={true}>
         <H1>Usuários</H1>
 
         <ul>
